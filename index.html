@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Element Circulation Web</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@600&family=Pacifico&family=Permanent+Marker&family=Indie+Flower&family=Poppins:wght@800&display=swap');
+
+    body {
+      background: #000;
+      margin: 0;
+      font-family: sans-serif;
+      color: white;
+    }
+    .title {
+      position: absolute;
+      top: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 36px;
+      font-weight: bold;
+      animation: colorChange 20s linear infinite;
+    }
+    .footer {
+      position: absolute;
+      bottom: 20px;
+      width: 100%;
+      text-align: center;
+      font-size: 12px;
+      color: #aaa;
+      line-height: 1.4;
+    }
+    .circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 600px;
+      height: 600px;
+    }
+    .ring {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      border: 1.5px solid white;
+      box-shadow: 0 0 8px rgba(255,255,255,0.2);
+    }
+    .ring .element {
+      position: absolute;
+      width: 110px;
+      height: 55px;
+      background: linear-gradient(45deg, #333, #555);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: bold;
+      box-shadow: 2px 2px 10px rgba(255,255,255,0.3);
+      z-index: 10;
+    }
+    .ring.r1 {
+      width: 150px; height: 150px;
+      animation: rotate 8s linear infinite;
+    }
+    .ring.r2 {
+      width: 200px; height: 200px;
+      animation: rotate 9s linear infinite;
+    }
+    .ring.r3 {
+      width: 260px; height: 260px;
+      animation: rotate 10s linear infinite;
+    }
+    .ring.r4 {
+      width: 330px; height: 330px;
+      animation: rotate 11s linear infinite;
+    }
+    .ring.r5 {
+      width: 410px; height: 410px;
+      animation: rotate 12s linear infinite;
+    }
+
+    .r1 .element {
+      top: -30px; left: 50%;
+      color: #00f;
+      font-family: 'Pacifico', cursive, sans-serif;
+      animation: counterRotateR1 8s linear infinite;
+    }
+    .r2 .element {
+      top: 50%; right: -57px;
+      color: #0f0;
+      font-family: 'Indie Flower', cursive, sans-serif;
+      animation: counterRotateR2 9s linear infinite;
+    }
+    .r3 .element {
+      bottom: -30px; left: 50%;
+      color: #f00;
+      font-family: 'Permanent Marker', cursive, sans-serif;
+      animation: counterRotateR3 10s linear infinite;
+    }
+    .r4 .element {
+      top: 50%; left: -57px;
+      color: #ffa500;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 800;
+      font-size: 22px;
+      letter-spacing: -0.5px;
+      animation: counterRotateR4 11s linear infinite;
+    }
+    .r5 .element {
+      top: -30px; left: 50%;
+      color: #fff;
+      font-family: 'Orbitron', sans-serif;
+      animation: counterRotateR5 12s linear infinite;
+    }
+
+    @keyframes rotate {
+      0% { transform: translate(-50%, -50%) rotate(0deg); }
+      100% { transform: translate(-50%, -50%) rotate(360deg); }
+    }
+    @keyframes colorChange {
+      0% { color: #fff; }
+      20% { color: #00f; }
+      40% { color: #0f0; }
+      60% { color: #f00; }
+      80% { color: #ffa500; }
+      100% { color: #fff; }
+    }
+    @keyframes counterRotateR1 {
+      0% { transform: translateX(-50%) rotate(0deg); }
+      100% { transform: translateX(-50%) rotate(-360deg); }
+    }
+    @keyframes counterRotateR2 {
+      0% { transform: translateY(-50%) rotate(0deg); }
+      100% { transform: translateY(-50%) rotate(-360deg); }
+    }
+    @keyframes counterRotateR3 {
+      0% { transform: translateX(-50%) rotate(0deg); }
+      100% { transform: translateX(-50%) rotate(-360deg); }
+    }
+    @keyframes counterRotateR4 {
+      0% { transform: translateY(-50%) rotate(0deg); }
+      100% { transform: translateY(-50%) rotate(-360deg); }
+    }
+    @keyframes counterRotateR5 {
+      0% { transform: translateX(-50%) rotate(0deg); }
+      100% { transform: translateX(-50%) rotate(-360deg); }
+    }
+  </style>
+</head>
+<body>
+  <div class="title">The Five Elements</div>
+  <div class="circle">
+    <div class="ring r1"><div class="element">Water</div></div>
+    <div class="ring r2"><div class="element">Wood</div></div>
+    <div class="ring r3"><div class="element">Fire</div></div>
+    <div class="ring r4"><div class="element">Earth</div></div>
+    <div class="ring r5"><div class="element">Metal</div></div>
+  </div>
+  <div class="footer">
+    by 088<br>
+    made in Vibe with Grok
+  </div>
+</body>
+</html>
